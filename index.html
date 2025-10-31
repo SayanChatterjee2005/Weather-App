@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard 🌦</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div id="animatedBg" class="animated-bg bg-clear">
+    <header>
+      <h1>WeatherNova</h1>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search city..." />
+        <button id="searchBtn"><i class="fa fa-search"></i></button>
+      </div>
+    </header>
+
+    <main class="weather-container">
+      <section class="current-weather">
+        <h2 id="locationName">Loading...</h2>
+        <p id="timezone">Timezone:</p>
+        <div class="datetime">
+          <p id="localDate">--</p>
+          <p id="localTime" class="clock">--:--:--</p>
+        </div>
+
+        <div class="weather-details">
+          <div class="temp">
+            <span id="temperature">--°C</span>
+            <p id="weatherDesc">---</p>
+          </div>
+          <div class="stats">
+            <p><i class="fa-solid fa-wind"></i> Wind: <span id="wind">--</span></p>
+            <p><i class="fa-solid fa-droplet"></i> Humidity: <span id="humidity">--</span></p>
+            <p><i class="fa-solid fa-gauge"></i> Pressure: <span id="pressure">--</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="forecast-section">
+        <h3>Last 4 Days</h3>
+        <div id="historyPrev" class="forecast-grid"></div>
+
+        <h3>Next 4 Days</h3>
+        <div id="forecastNext" class="forecast-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>🌍 Powered by <a href="https://github.com/SayanChatterjee2005" target="_blank">Sayan Chatterjee</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
